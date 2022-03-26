@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        RetrofitManager.getCall("https://service.urovo.com:911/").create(HttpService.class)
+        RetrofitManager.getCall("http://49.232.114.172:8080/").create(HttpService.class)
                 .getbaidu().enqueue(new Callback<ApiResponse>() {
             @Override
             public void onResponse(Call<ApiResponse> call, Response<ApiResponse> response) {
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ApiResponse> call, Throwable t) {
-
+                System.out.println(t.getMessage());
             }
         });
 //        RetrofitManager.get("https://service.urovo.com:911/").create(HttpService.class).

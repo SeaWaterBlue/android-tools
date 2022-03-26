@@ -13,8 +13,8 @@ import retrofit2.http.GET;
  * @date: 2022/3/26 11:22
  */
 public interface HttpService {
-    @GET("/api/v1/strategy/upload/")
+    @GET("yunying/qufumanage/getList.json/")
     Call<ApiResponse> getbaidu();
-    @GET("/api/v1/strategy/upload/")
+    @GET("yunying/qufumanage/getList.json/")
     LiveData<ApiResponse> getbaiduLive();
 }
